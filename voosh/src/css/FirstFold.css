@@ -1,0 +1,31 @@
+
+#first_fold_container{
+    display: flex;
+}
+
+.left_box_bgImg{
+    height: 660px;
+    width: 100%;
+}
+
+.left, .right{
+    width: 45vw;
+    padding-left: 4vw;
+}
+.right img{
+    width: 100%;
+}
+
+
+h1{
+    margin-top: 130px;
+    text-align: left;
+
+}
+p{
+    font-size: .91em;
+    font-weight: 500;
+    text-align: left;
+    color: #202020;
+    margin-bottom: 70px;
+}

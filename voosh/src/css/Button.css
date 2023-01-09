@@ -1,0 +1,17 @@
+.button_a{
+    background-color: #2D66F5;
+    width: fit-content;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px ;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; 
+}
+.button_text{
+    color: white;
+    font-weight: 600;
+}

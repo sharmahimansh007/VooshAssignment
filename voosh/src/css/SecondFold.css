@@ -1,0 +1,66 @@
+#second_fold_container{
+    background-image: url(https://voosh.in/static/media/book_now_bg.e9f9294653918137cd78.webp);
+    height: 95vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.star_css{
+    margin-left: 3px;
+    color: #ee3832;
+}
+#second_fold_title{
+    color: #fff;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 700;
+}
+#form{
+    width: 70vw;
+    /* border: 1px solid red; */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.input_text{
+    margin-bottom: 10px;
+    text-align: left;
+}
+.input_field{
+    border: transparent;
+    width: 100%;
+    background-color: #eff0f3;
+    padding: 10px 0 10px 10px;
+    font-size: 1em;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+#submit_button{
+    width: 100%;
+    height: 50px;
+    border: transparent;
+    background-color: #2D66F5;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+
+
+    #form{
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    #second_fold_container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+

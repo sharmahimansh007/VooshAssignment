@@ -11,8 +11,10 @@
 .left, .right{
     width: 45vw;
     padding-left: 4vw;
+    position: relative;
+
 }
-.right img{
+.width-100{
     width: 100%;
 }
 
@@ -29,3 +31,40 @@ p{
     color: #202020;
     margin-bottom: 70px;
 }
+
+.right{
+    margin-top: 15px;
+}
+.common-css{
+    height: 10vh;
+    width: 5vw;
+    position: absolute;
+}
+.grub_img{
+   
+    left: 30%;
+    top: -15px;
+}
+.uber_img{
+   
+    left: 62%;
+    top: -2px;
+}
+.other_img{
+    top: 38vh;
+     left: 6%;
+}
+.amazon_img{
+    left: 70%;
+    top: 45vh;
+}
+.zomato_img{
+    left: .6%;
+    top: 80vh;
+
+}
+.swiggy_img{
+    left: 30%;
+    top: 94vh;
+}
+

@@ -1,21 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/SecondFold.css";
-import Button from "./Button";
+// import Button from "./Button";
 
-export const SecondFold = ({ user }) => {
+export const SecondFold = ({ user, setUser }) => {
+
+ const [userData, setUserData] = useState({
+  name : "",
+  email : "",
+  companyName : "",
+  title : "",
+  password : ""
+ })
+
+ const handleChange = ({target}) => {
+  setUserData({...userData, [target.name]:target.value});
+
+ }
+
+ const submitData = (event) => {
+  event.preventDefault();
+  setUser(userData)
+ }
+
+ const logout = () => {
+  setUser({});
+ }
+ 
+
   return (
     <div id="second_fold_container">
-      <div id="second_fold_title">Book A Demo Now</div>
+      <div className="second_fold_title">Book A Demo Now</div>
       <div>
-        <div id="form">
+      {user.name ? <div className="second_fold_title text">Your Demo request is Successfully submitted <br /> <button onClick={logout} className="newDemo">Book New Demo</button></div> :  <form onSubmit={submitData} id="form">
           <div className="input_text">
             Name
             <span className="star_css">*</span>
           </div>
           <input
             className="input_field"
+            required
             type="text"
             placeholder="Ex. John Doe"
+            value={userData.name}
+            name="name"
+            onChange={handleChange}
           />
           <div className="input_text">
             Email
@@ -25,6 +53,11 @@ export const SecondFold = ({ user }) => {
             className="input_field"
             type="email"
             placeholder="Ex. mail@website.com"
+            required
+            value={userData.email}
+            name="email"
+            onChange={handleChange}
+            
           />
           <div className="input_text">
             Company Name
@@ -34,6 +67,10 @@ export const SecondFold = ({ user }) => {
             className="input_field"
             type="text"
             placeholder="Ex. XYZ PVT LTD"
+            required
+            name="companyName"
+            onChange={handleChange}
+            value={userData.companyName}
           />
           <div className="input_text">
             Your Title
@@ -43,6 +80,10 @@ export const SecondFold = ({ user }) => {
             className="input_field"
             type="text"
             placeholder="Ex. Operational Head"
+            required
+            name="title"
+            onChange={handleChange}
+            value={userData.title}
           />
           <div className="input_text">
             Password
@@ -52,9 +93,14 @@ export const SecondFold = ({ user }) => {
             className="input_field"
             type="password"
             placeholder="qwery@123"
+            required
+            value={userData.password}
+            onChange={handleChange}
+            name="password"
+            
           />
           <input id="submit_button" type="submit" value="Book Demo" />
-        </div>
+        </form>}
       </div>
     </div>
   );

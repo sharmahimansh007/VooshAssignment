@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/SecondFold.css";
 // import Button from "./Button";
 
@@ -20,12 +20,19 @@ export const SecondFold = ({ user, setUser }) => {
  const submitData = (event) => {
   event.preventDefault();
   setUser(userData)
+
  }
 
  const logout = () => {
   setUser({});
  }
+
  
+ useEffect(() => {
+  if(user.name){
+    alert("Hii "+user.name+". Your are logged in")
+   }
+ },[])
 
   return (
     <div id="second_fold_container">

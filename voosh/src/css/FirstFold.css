@@ -55,8 +55,8 @@ p{
      left: 6%;
 }
 .amazon_img{
-    left: 70%;
-    top: 45vh;
+    left: -35%;
+    top: 40vh;
 }
 .zomato_img{
     left: .6%;
@@ -64,7 +64,45 @@ p{
 
 }
 .swiggy_img{
-    left: 30%;
-    top: 94vh;
+    left: -75%;
+    top: 92vh;
 }
 
+@media screen and (max-width: 992px) {
+    #first_fold_container{
+        display: block;
+    }
+
+    .left{
+    width: auto;
+    text-align: center;
+    font-size: 13px;
+    padding: 0 35px;
+    }
+    .common-css{
+        height: 10vh;
+        width: 50px;
+        position: unset;
+    }
+
+    .right{
+        width: auto;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+        box-sizing: border-box;
+    }
+    .width-100{
+        width: 95%;
+    }
+    
+    .images{
+        padding: 0 8px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 90px;
+        width: 1200px;
+    }
+
+}

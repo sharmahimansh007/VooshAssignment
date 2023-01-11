@@ -87,6 +87,12 @@
     #second_fold_container{
         grid-template-columns: 1fr;
         align-items: center;
+
+    }
+    #form{
+        width: auto;
+        /* border: 1px solid red; */
+
     }
     .text{
         margin-right: 0px;
